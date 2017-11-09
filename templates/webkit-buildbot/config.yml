@@ -5,3 +5,5 @@ category: CI/CD
 maintainer: don.olmstead@sony.com
 license: Commercial
 projectURL: https://webkit.org
+labels:
+   io.rancher.orchestration.supported: 'windows'
