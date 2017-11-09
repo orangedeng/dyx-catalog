@@ -1,0 +1,44 @@
+.catalog:
+  name: WebKit Public Buildbot
+  version: 1.0.0
+  description: WebKit Public Buildbot Instance
+  uuid: webkit-buildbot-1
+  minimum_rancher_version: v1.3.0
+  questions:
+    - variable: BUILD_SLAVE_NAME
+      label: The name of the buildbot slave.
+      description: |
+        The name of the buildbot slave. This is created on the buildbot master
+        and is used to connect to it.
+      required: true
+      type: string
+
+    - variable: BUILD_SLAVE_PASSWORD
+      label: The password for the buildbot slave.
+      description: |
+        The password of the buildbot slave. This is created on the buildbot
+        master and is used to connect to it.
+      required: true
+      type: string
+
+    - variable: ADMIN_NAME
+      label: The full name of the administrator of the buildbot.
+      description: The full name of the administrator of the buildbot.
+      required: true
+      type: string
+
+    - variable: ADMIN_EMAIL
+      label: The email for the administrator of the buildbot.
+      description: The email for the administrator of the buildbot.
+      required: true
+      type: string
+
+    - variable: HOST_DESCRIPTION
+      label: The description for the buildbot.
+      description: The description for the buildbot.
+      required: true
+      type: string
+      default: Buildbot provided by Sony Interactive Entertainment
+
+buildbot:
+  scale: 1

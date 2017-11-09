@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  buildbot:
+    image: webkitdev/buildbot
+    environment:
+      ADMIN_EMAIL: ${ADMIN_EMAIL}
+      ADMIN_NAME: ${ADMIN_NAME}
+      BUILD_SLAVE_NAME: ${BUILD_SLAVE_NAME}
+      BUILD_SLAVE_PASSWORD: ${BUILD_SLAVE_PASSWORD}
+      HOST_DESCRIPTION: ${HOST_DESCRIPTION}
+    network_mode: nat
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.affinity:host_label: ci.server=${BUILD_SLAVE_NAME}
+      io.rancher.service.selector.container: experimental-windows-rancher

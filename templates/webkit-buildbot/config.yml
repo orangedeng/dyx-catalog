@@ -1,0 +1,7 @@
+name: webkit-buildbot
+description: WebKit Public Buildbot Instance
+version: 1.0.0
+category: CI/CD
+maintainer: don.olmstead@sony.com
+license: Commercial
+projectURL: https://webkit.org
